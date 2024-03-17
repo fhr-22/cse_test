@@ -45,7 +45,7 @@ def main():
     for fname in current_file_data:
         if fname["name"] not in old_filenames:
             new_file_data_list.append(
-                {"date": fakedate(), "name": fname["name"], "ext": fname["ext"]}
+                {"date": datestring(), "name": fname["name"], "ext": fname["ext"]}
             )
 
     # for removing deleted files
