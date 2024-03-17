@@ -1,0 +1,22 @@
+{% extends "header_footer.html" %}
+
+{% block title %}KUCSE - Notices{% endblock %}
+
+{% block content %}
+
+<h1>notices</h1>
+
+{% if data %}
+<ul>
+
+    {% for item in data %}
+    <li>{{ item.date }} :: <a href="notices/{{ item.name }}{{ item.ext }}"> {{ item.name }}</a> </li>
+    {% endfor %}
+</ul>
+
+
+{% else %}
+<p>No notices uploaded.</p>
+{% endif %}
+
+{% endblock %}
