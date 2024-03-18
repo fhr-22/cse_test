@@ -32,13 +32,13 @@ jobs:
       - name: Run second script
         run: python update_notices.py 
         
-      - name: Commit changes
-        run: |
-          git config --global user.email "you@example.com"
-          git config --global user.name "Your Name"
-          git add .
-          git commit -m "Automated modifications"
-          git push
+      # - name: Commit changes
+      #   run: |
+      #     git config --global user.email "you@example.com"
+      #     git config --global user.name "Your Name"
+      #     git add .
+      #     git commit -m "Automated modifications"
+      #     git push
       # - name: Add & Commit
       #   uses: EndBug/add-and-commit@v9.1.4
       #   with:
@@ -47,8 +47,7 @@ jobs:
             
 
                     
-      # - name: Git Auto Commit
-      #   uses: stefanzweifel/git-auto-commit-action@v5.0.0
-      #   with:
-      #     commit_message: Rebuilt site [vercel]
-      #     skip_dirty_check: false  
+      - name: Git Auto Commit
+        uses: stefanzweifel/git-auto-commit-action@v5.0.0
+        with:
+          commit_message: Rebuilt site [vercel]
