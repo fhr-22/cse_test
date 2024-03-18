@@ -22,7 +22,7 @@
 
 :root {
     --blue_bg: #4c759f;
-    --width: 770px;
+    --width: 680px;
     --body-font: "IBM Plex Sans", sans-serif;
     --heading-font: "Lora", serif;
     --mono-font: "JetBrains Mono", monospace;
@@ -53,7 +53,7 @@ body {
     color: white;
     background-color: var(--blue_bg);
     max-width: 100%;
-    padding: 10px;
+    padding: 8px;
     margin-bottom: 2px;
 }
 
@@ -67,12 +67,22 @@ body {
 
 }
 
+#header a {
+    text-decoration-color: transparent;
+    text-underline-offset: 3px;
+    transition: all 0.2s ease-out;
+}
+
+#header a:hover {
+    text-decoration-color: white;
+}
+
 .univ {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .dept {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .logo {
@@ -83,6 +93,7 @@ body {
 .logo img {
     width: 100%;
     height: 100%;
+    aspect-ratio: 1;
 }
 
 @media (max-width: 650px) {
@@ -95,7 +106,7 @@ body {
     }
 
     .logo {
-        min-width: 50px;
+        width: 50px;
         height: 50px;
     }
 }
@@ -107,13 +118,13 @@ body {
 nav {
     max-width: 100%;
     margin: 3px 0;
-    padding: 12px 12px 14px 12px;
+    padding: 9px 9px 12px 9px;
 
     background-color: var(--blue_bg);
     text-align: center;
     color: white;
     font-family: var(--mono-font);
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     letter-spacing: 1.5px;
 }
 
@@ -154,7 +165,7 @@ nav a:hover {
     /* generic text styles */
     font-family: var(--body-font);
     color: hsl(210deg 70% 30%);
-    font-size: 1.35rem;
+    font-size: 1.15rem;
     line-height: 1.25;
 
 }
@@ -169,21 +180,24 @@ nav a:hover {
 
 #body h1 {
     margin: 35px 0 20px 0;
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
 }
 
 #body h2 {
     margin: 20px 0 15px 0;
-    font-size: 2.2rem;
+    font-size: 2.1rem;
 }
 
 #body p {
     margin: 15px 0;
     font-family: var(--body-font);
     color: hsl(210deg 70% 30%);
-    font-size: 1.35rem;
     line-height: 1.25;
+}
+
+a {
+    color: inherit;
 }
 
 .deptimg {
@@ -247,7 +261,7 @@ footer h2 {
 }
 
 footer p {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 footer a {
