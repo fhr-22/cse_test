@@ -31,6 +31,20 @@ jobs:
 
       - name: Run second script
         run: python update_notices.py 
+        
+      # - name: Commit changes
+      #   run: |
+      #     git config --global user.email "you@example.com"
+      #     git config --global user.name "Your Name"
+      #     git add .
+      #     git commit -m "Automated modifications"
+      #     git push
+      # - name: Add & Commit
+      #   uses: EndBug/add-and-commit@v9.1.4
+      #   with:
+      #     message : Rebuilt site [vercel]
+        
+            
 
                     
       - name: Git Auto Commit
