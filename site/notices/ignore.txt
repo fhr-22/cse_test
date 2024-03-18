@@ -1,0 +1,2 @@
+dummy file so that the notices folder is tracked by git
+(git doesn't work nice with empty folders)

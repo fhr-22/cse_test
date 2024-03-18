@@ -26,6 +26,7 @@ def get_fname_ext(directory):
     file_data = [
         {"name": os.path.splitext(file)[0], "ext": os.path.splitext(file)[1]}
         for file in files
+        if file != "ignore.txt"
     ]
     return file_data
 
