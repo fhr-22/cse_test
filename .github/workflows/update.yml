@@ -25,7 +25,7 @@ jobs:
       - run: pip install -r requirements.txt
 
       - name: Rebuild site
-        run: python render_static_pages.py && python update_notices.py
+        run: cd build_scripts && python render_static_pages.py && python update_notices.py
 
       - name: Git Auto Commit
         uses: stefanzweifel/git-auto-commit-action@v5.0.0
