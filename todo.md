@@ -13,6 +13,8 @@ sitemap
 
 - index.html
 - notices.html
+- courses.html
+- 
 
 
 static/ s
