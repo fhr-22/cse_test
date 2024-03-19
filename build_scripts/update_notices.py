@@ -35,9 +35,9 @@ def main():
 
     new_file_data_list = []
 
-    current_file_data = get_fname_ext("site/notices")
+    current_file_data = get_fname_ext(f"..{os.sep}site{os.sep}notices")
 
-    with open("site/notice_list.json", "r") as file:
+    with open(f"..{os.sep}site{os.sep}notice_list.json", "r") as file:
         old_file_data_list = json.load(file)
 
     old_filenames = [x["name"] for x in old_file_data_list]
@@ -64,14 +64,14 @@ def main():
         key=lambda x: datetime.strptime(x["date"], "%d-%m-%y"), reverse=True
     )
 
-    with open("site/notice_list.json", "w") as file:
+    with open(f"..{os.sep}site{os.sep}notice_list.json", "w") as file:
         file.write(json.dumps(new_file_data_list))
 
-    env = Environment(loader=FileSystemLoader("templates"))
+    env = Environment(loader=FileSystemLoader(f"..{os.sep}templates"))
     template = env.get_template("notices.html")
     rendered_content = template.render(data=new_file_data_list)
 
-    with open("site/notices.html", "w", encoding="utf-8") as file:
+    with open(f"..{os.sep}site{os.sep}notices.html", "w", encoding="utf-8") as file:
         file.write(rendered_content)
 
 

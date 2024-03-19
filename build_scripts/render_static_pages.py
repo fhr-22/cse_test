@@ -1,7 +1,7 @@
 from jinja2 import Environment, FileSystemLoader
-import os
+from os import sep
 
-env = Environment(loader=FileSystemLoader("templates"))
+env = Environment(loader=FileSystemLoader(f"..{sep}templates"))
 
 
 def render_and_save_template(template_name, output_file_path):
@@ -14,7 +14,7 @@ def render_and_save_template(template_name, output_file_path):
     # os.makedirs(output_dir, exist_ok=True)
 
     # Save the rendered content to the specified file
-    with open("site/" + output_file_path, "w", encoding="utf-8") as file:
+    with open(f"..{sep}site{sep}" + output_file_path, "w", encoding="utf-8") as file:
         file.write(rendered_content)
 
 
