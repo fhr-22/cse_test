@@ -45,6 +45,12 @@ body {
 }
 
 
+.t-toast {
+    border-radius: 9px !important;
+    padding: 8px 10px !important;
+    box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, .2) !important;
+}
+
 /*  -------------------------
                      HEADER   
             -------------------------  */
@@ -108,6 +114,7 @@ body {
     .logo {
         width: 50px;
         height: 50px;
+        aspect-ratio: 1;
     }
 }
 
@@ -273,6 +280,5 @@ footer a {
     footer p {
         font-size: 0.9rem;
     }
-
 
 }

@@ -2,6 +2,10 @@
 
 {% block title %}KUCSE - Notices{% endblock %}
 
+{% block extra_head %}
+
+{% endblock %}
+
 {% block content %}
 
 <h1>Notices</h1>
@@ -19,4 +23,36 @@
 <p>No notices uploaded.</p>
 {% endif %}
 
+<script src="static/tiny-toast.js"></script>
+<script>
+
+    var new_data = {{ json_list }};
+
+
+    function compare_lists(ls1, ls2) {
+        return ls2.filter(item => !ls1.includes(item)).length;
+    }
+
+    onload = (e) => {
+
+        if (localStorage.getItem('visited') === 'true') { // not first visit
+            var old_list = JSON.parse(localStorage.getItem("prev_notices"));
+            var count_new_notices = compare_lists(old_list, new_data);
+
+            if (count_new_notices > 0) {
+                toast.success(`${count_new_notices} new notice(s) since last visit.`, 3000);
+            }
+            else {
+                toast.success("No new notices since last visit.", 3000);
+            }
+        }
+        else { // first visit
+            toast.success("First visit? Consider bookmarking and check regularly for updates.", 6000);
+            localStorage.setItem('visited', 'true');
+        }
+        localStorage.setItem("prev_notices", JSON.stringify(new_data));
+
+    };
+
+</script>
 {% endblock %}

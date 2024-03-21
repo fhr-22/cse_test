@@ -69,7 +69,10 @@ def main():
 
     env = Environment(loader=FileSystemLoader(f"..{os.sep}templates"))
     template = env.get_template("notices.html")
-    rendered_content = template.render(data=new_file_data_list)
+    rendered_content = template.render(
+        data=new_file_data_list,
+        json_list=json.dumps([x["name"] for x in new_file_data_list]),
+    )
 
     with open(f"..{os.sep}site{os.sep}notices.html", "w", encoding="utf-8") as file:
         file.write(rendered_content)
