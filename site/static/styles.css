@@ -3,6 +3,7 @@
     font-style: normal;
     font-weight: normal;
     src: url('ibm-plex-sans.woff') format('woff');
+    /* src: url('ibm-regular.woff') format('woff'); */
 }
 
 
@@ -46,8 +47,9 @@ body {
 
 
 .t-toast {
-    border-radius: 9px !important;
-    padding: 8px 10px !important;
+    font-family: var(--body-font);
+    border-radius: 0px !important;
+    padding: 8px !important;
     box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, .2) !important;
 }
 
@@ -149,7 +151,7 @@ nav a {
 nav a:hover {
     text-underline-offset: 6px;
     text-decoration-thickness: 1.5px;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 @media (max-width: 650px) {
@@ -193,7 +195,7 @@ nav a:hover {
 
 #body h2 {
     margin: 20px 0 15px 0;
-    font-size: 2.1rem;
+    font-size: 1.7rem;
 }
 
 #body p {
