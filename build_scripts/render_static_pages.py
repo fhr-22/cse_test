@@ -22,3 +22,4 @@ def render_and_save_template(template_name, output_file_path):
 
 render_and_save_template("home_page.html", "index.html")
 render_and_save_template("faculty.html", "faculty.html")
+render_and_save_template("404.html", "404.html")

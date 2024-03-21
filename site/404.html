@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="static/styles.css">
-    <title>KUCSE - Notices</title>
+    <title>Page not found.</title>
     
-
-
 </head>
 
 <body>
@@ -46,44 +44,13 @@
 
             
 
-<h1>Notices</h1>
+
+<h1>Error 404</h1>
+
+<p>The requested page does not exist.</p>
 
 
-<p>No notices uploaded.</p>
 
-
-<script src="static/tiny-toast.js"></script>
-<script>
-
-    var new_data = [];
-
-
-    function compare_lists(ls1, ls2) {
-        return ls2.filter(item => !ls1.includes(item)).length;
-    }
-
-    onload = (e) => {
-
-        if (localStorage.getItem('visited') === 'true') { // not first visit
-            var old_list = JSON.parse(localStorage.getItem("prev_notices"));
-            var count_new_notices = compare_lists(old_list, new_data);
-
-            if (count_new_notices > 0) {
-                toast.success(`${count_new_notices} new notice(s) since last visit.`, 3000);
-            }
-            else {
-                toast.success("No new notices since last visit.", 3000);
-            }
-        }
-        else { // first visit
-            toast.success("First visit? Consider bookmarking and check regularly for updates.", 6000);
-            localStorage.setItem('visited', 'true');
-        }
-        localStorage.setItem("prev_notices", JSON.stringify(new_data));
-
-    };
-
-</script>
 
 
         </div>
