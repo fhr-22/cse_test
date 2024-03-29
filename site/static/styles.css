@@ -2,8 +2,7 @@
     font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: normal;
-    src: url('ibm-plex-sans.woff') format('woff');
-    /* src: url('ibm-regular.woff') format('woff'); */
+    src: url('fonts/ibm-plex-sans.woff') format('woff');
 }
 
 
@@ -11,14 +10,14 @@
     font-family: 'Lora';
     font-style: normal;
     font-weight: normal;
-    src: url('lora.woff') format('woff');
+    src: url('fonts/lora.woff') format('woff');
 }
 
 @font-face {
     font-family: 'JetBrains Mono';
     font-style: normal;
     font-weight: normal;
-    src: url('jetbrainsmono-caps.woff') format('woff');
+    src: url('fonts/jetbrainsmono-caps.woff') format('woff');
 }
 
 :root {
@@ -181,21 +180,30 @@ nav a:hover {
 
 
 #body h1,
-#body h2 {
+#body h2,
+#body h3,
+#body h4 {
     font-family: var(--heading-font);
     color: var(--blue_bg);
     font-weight: normal;
 }
 
 #body h1 {
-    margin: 35px 0 20px 0;
+    margin: 20px 0 20px 0;
     font-size: 2.5rem;
     text-align: center;
 }
 
 #body h2 {
-    margin: 20px 0 15px 0;
+    margin: 20px 0 10px 0;
     font-size: 1.7rem;
+}
+
+#body h3,
+h4,
+h5,
+h6 {
+    font-size: 1.5rem;
 }
 
 #body p {
@@ -207,6 +215,15 @@ nav a:hover {
 
 a {
     color: inherit;
+}
+
+#body ul {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#body li {
+    margin-bottom: 5px;
 }
 
 .deptimg {
@@ -253,6 +270,10 @@ footer {
     max-width: 100%;
     background-color: var(--blue_bg);
     color: white;
+}
+
+footer .container {
+    max-width: calc(var(--width) - 15px);
 }
 
 footer .container div {

@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Notices - Dept. of CSE, KU.">
+    <meta name="description" content="People - Dept. of CSE, KU.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="static/styles.css">
-    <title>KUCSE - Notices</title>
+    <title>KUCSE - People</title>
     
 </head>
 
@@ -38,53 +38,53 @@
         <div id="body">
             
 
-<h1>Notices</h1>
 
+<h1>People</h1>
+
+
+<h2>Faculty</h2>
 
 <ul>
+        <li>Prof. Dr. Kalyani Mali (HOD) &bull; <a href="https://klyuniv.ac.in/professors/kalyani-mali/" target="_blank"
+                        rel="noopener noreferrer">details</a>
+        </li>
+        <li>Prof. Dr. Priya Ranjan Sinha Mahapatra &bull; <a
+                        href="https://klyuniv.ac.in/professors/dr-priya-ranjan-sinha-mahapatra/" target="_blank"
+                        rel="noopener noreferrer">details</a>
+        </li>
+        <li>Prof. Dr. Utpal Biswas &bull; <a href="https://klyuniv.ac.in/professors/utpal-biswas/" target="_blank"
+                        rel="noopener noreferrer">details</a>
+        </li>
+        <li>Prof. Dr. Anirban Mukhopadhyay &bull; <a href="https://klyuniv.ac.in/professors/a-mukhopadhyay/"
+                        target="_blank" rel="noopener noreferrer">details</a>
+        </li>
+        <li>Prof. Dr. Jyotsna Kumar Mandal &bull; <a href="https://klyuniv.ac.in/professors/jyostna-kumar-mandal/"
+                        target="_blank" rel="noopener noreferrer">details</a>
+        </li>
+        <li>Dr. Debarata Sarddar, Asst. Prof. &bull; <a href="https://klyuniv.ac.in/professors/debabrata-sarddar/"
+                        target="_blank" rel="noopener noreferrer">details</a>
+        </li>
+        <li>Mr. Sukanta Majumder, Asst. Prof.&bull; <a href="https://klyuniv.ac.in/professors/sukanta-majumder/"
+                        target="_blank" rel="noopener noreferrer">details</a>
+        </li>
+        <li>Mr. Jaydeep Paul, Asst. Prof. (Cont.)
+        </li>
+</ul>
 
-    
-    <li>27-03-24 :: <a href="notices/Demo Notice.pdf"> Demo Notice</a> </li>
-    
+<h2>Technical Staff</h2>
+<ul>
+        <li>Mr. Anup Sarkar</li>
+</ul>
+
+<h2>Office Staff</h2>
+<ul>
+        <li>Mr. Ashish Dutta</li>
+        <li>Mr. Sanjit Roy</li>
+        <li>Mrs. Purabi Nandi</li>
+        <li>Mr. Amit Das (Casual)</li>
 </ul>
 
 
-
-
-<script src="static/tiny-toast.js"></script>
-<script>
-
-    var new_data = ["Demo Notice"]; // populated when template is rendered
-
-
-    function compare_lists(ls1, ls2) {
-        return ls2.filter(item => !ls1.includes(item)).length;
-    }
-
-    onload = (e) => {
-
-        if (localStorage.getItem('visited') === 'true') { // not first visit
-
-            var old_list = JSON.parse(localStorage.getItem("prev_notices"));
-            var count_new_notices = compare_lists(old_list, new_data);
-
-            if (count_new_notices > 0) {
-                toast.success(`${count_new_notices} new notice(s) since last visit.`, 3000);
-            }
-            else {
-                toast.success("No new notices since last visit.", 3000);
-            }
-        }
-        else { // first visit
-            toast.success("First visit? Consider bookmarking and check regularly for updates.", 6000);
-            localStorage.setItem('visited', 'true');
-        }
-
-        localStorage.setItem("prev_notices", JSON.stringify(new_data));
-
-    };
-
-</script>
 
         </div>
 

@@ -35,7 +35,7 @@ def main():
 
     new_file_data_list = []
 
-    current_file_data = get_fname_ext(f"..{os.sep}site{os.sep}notices")
+    current_file_data = get_fname_ext(f"..{os.sep}site{os.sep}notice_files")
 
     with open(f"..{os.sep}site{os.sep}notice_list.json", "r") as file:
         old_file_data_list = json.load(file)

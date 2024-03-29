@@ -1,10 +1,8 @@
 {% extends "header_footer.html" %}
 
+{% block description %}Notices - Dept. of CSE, KU.{% endblock %}
+
 {% block title %}KUCSE - Notices{% endblock %}
-
-{% block extra_head %}
-
-{% endblock %}
 
 {% block content %}
 
@@ -26,7 +24,7 @@
 <script src="static/tiny-toast.js"></script>
 <script>
 
-    var new_data = {{ json_list }};
+    var new_data = {{ json_list }}; // populated when template is rendered
 
 
     function compare_lists(ls1, ls2) {
@@ -36,6 +34,7 @@
     onload = (e) => {
 
         if (localStorage.getItem('visited') === 'true') { // not first visit
+
             var old_list = JSON.parse(localStorage.getItem("prev_notices"));
             var count_new_notices = compare_lists(old_list, new_data);
 
@@ -50,6 +49,7 @@
             toast.success("First visit? Consider bookmarking and check regularly for updates.", 6000);
             localStorage.setItem('visited', 'true');
         }
+
         localStorage.setItem("prev_notices", JSON.stringify(new_data));
 
     };
