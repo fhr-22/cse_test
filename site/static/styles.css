@@ -220,6 +220,8 @@ a {
 #body ul {
     margin-top: 5px;
     margin-bottom: 5px;
+    padding-left: 30px;
+    ;
 }
 
 #body li {
