@@ -211,6 +211,7 @@ h6 {
     font-family: var(--body-font);
     color: hsl(210deg 70% 30%);
     line-height: 1.25;
+    text-align: justify;
 }
 
 a {
