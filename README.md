@@ -1,6 +1,8 @@
 # Site - Dept of CSE, Kalyani University
 
-Static website, with easy notice uploads directly from the Github web UI. Built using Github Actions and static hosting by Vercel.
+Static website, with easy notice uploads directly from the Github web UI. 
+
+Built using Github Actions and static hosting provided by Vercel.
 
 > [!IMPORTANT]  
 > - Any of the following modifications to the source code (and subsequently updates to the website) are only possible if you're logged in and own the repository, or have write access to it.
