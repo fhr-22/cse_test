@@ -11,7 +11,7 @@ Built using Github Actions and static hosting provided by Vercel.
 
 ## Uploading Notices
 
-To upload a notice, simply upload a file to the [site/notice_files](site/notice_files) folder and confirm using the `Commit changes` button. The `/notices.html` page on the site will automatically be updated.
+To upload a notice, simply upload a file to the [site/notice_files](site/notice_files) folder and confirm using the `Commit changes` button. The `/notices.html` page on the site will automatically be updated, with the file name used for the notice link.
 
 
 ## Updating site pages
